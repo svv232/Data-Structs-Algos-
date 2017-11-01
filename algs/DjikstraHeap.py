@@ -58,8 +58,8 @@ def djikstra(graph,start):
 				path[i] = v
 			
 			elif weight < visited[i]:
-					visited[i] = weight
-					path[i] = v
+				visited[i] = weight
+				path[i] = v
 
 	return visited,path
 
@@ -74,8 +74,7 @@ g = Graph()
 A  = ['A','B','C','D','E','F']
 verts = {}
 
-for i in A:
-	verts[i] = g.add_vertex(i)
+for i in A: verts[i] = g.add_vertex(i)
 
 g.add_edge(verts['A'],verts['B'],3)
 g.add_edge(verts['A'],verts['C'],5)
@@ -83,3 +82,5 @@ g.add_edge(verts['B'],verts['D'],7)
 g.add_edge(verts['C'],verts['E'],8)
 g.add_edge(verts['D'],verts['F'],1)
 g.add_edge(verts['E'],verts['F'],2)
+
+shortest_path(g, g[a],g[f]) #Shortest path between A and F
